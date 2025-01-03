@@ -11,21 +11,17 @@ export default function Contact() {
             Interested in collaboration or have a project in mind? Let's connect and discuss how we can work together.
           </p>
           <div className="flex justify-center space-x-6 mb-8">
-            <a href="mailto:john@example.com" className="hover:text-indigo-200 transition flex items-center">
+            <a href="mailto:devangvamja2000@gmail.com" className="hover:text-indigo-200 transition flex items-center">
               <Mail className="w-6 h-6 mr-2" />
               Email
             </a>
-            <a href="#" className="hover:text-indigo-200 transition flex items-center">
+            <a href="https://github.com/DevangVamja" className="hover:text-indigo-200 transition flex items-center">
               <Github className="w-6 h-6 mr-2" />
               Github
             </a>
-            <a href="#" className="hover:text-indigo-200 transition flex items-center">
+            <a href="https://www.linkedin.com/in/devangvamja/" className="hover:text-indigo-200 transition flex items-center">
               <Linkedin className="w-6 h-6 mr-2" />
               LinkedIn
-            </a>
-            <a href="#" className="hover:text-indigo-200 transition flex items-center">
-              <Twitter className="w-6 h-6 mr-2" />
-              Twitter
             </a>
           </div>
         </div>

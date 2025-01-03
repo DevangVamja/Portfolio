@@ -20,7 +20,7 @@ export const skillsData = [
   {
     icon: <Code className="w-8 h-8" />,
     title: "Programming",
-    items: ["Python", "R", "SQL", "Java", "Shell Scripting"]
+    items: ["Python", "R", "SQL", "Java", "Java Script"]
   },
   {
     icon: <Share2 className="w-8 h-8" />,
