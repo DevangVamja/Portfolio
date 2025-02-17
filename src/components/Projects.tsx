@@ -2,14 +2,14 @@ import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
 
 const projects = [
-  {
-    title: "Predictive Customer Analytics",
-    description: "Developed a machine learning model to predict customer churn with 92% accuracy using historical transaction data and customer behavior patterns.",
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-    tags: ["Python", "TensorFlow", "SQL", "AWS"],
-    github: "#",
-    demo: "#"
-  },
+  // {
+  //   title: "Predictive Customer Analytics",
+  //   description: "Developed a machine learning model to predict customer churn with 92% accuracy using historical transaction data and customer behavior patterns.",
+  //   image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+  //   tags: ["Python", "TensorFlow", "SQL", "AWS"],
+  //   github: "#",
+  //   demo: "#"
+  // },
   {
     title: "Natural Language Processing Pipeline",
     description: "Built an end-to-end NLP pipeline for sentiment analysis on social media data, processing over 1M tweets daily.",
@@ -19,12 +19,11 @@ const projects = [
     demo: "#"
   },
   {
-    title: "Time Series Forecasting",
-    description: "Implemented an LSTM-based model for financial market prediction, achieving 15% improvement over baseline models.",
-    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=800",
-    tags: ["Python", "Keras", "Pandas", "Plotly"],
-    github: "#",
-    demo: "#"
+    title: "ATS-Analyzer-OpenAI",
+    description: "The ATS Analyzer App is a Flask-based web application designed to help job seekers analyze their resumes for ATS (Applicant Tracking System) friendliness. The app extracts key details from resumes and presents them in JSON format, allowing users to optimize their resumes for better visibility in recruitment processes.",
+    image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=8002a0a7236a3?auto=format&fit=crop&q=80&w=800",
+    tags: ["Python", "Flask", "OpenAI GPT", "PyPDF"],
+    github: "https://github.com/DevangVamja/ATS-Analyzer-OpenAI",
   }
 ];
 
