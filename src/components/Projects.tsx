@@ -11,7 +11,7 @@ const projects = [
   //   demo: "#"
   // },
   {
-    title: "Full_Scale_ML_Project",
+    title: "Full Scale ML Project",
     description: "Built an end-to-end ML project with train and test pipeline for Math score prediction using various categorical and numerical features with various models and hyper-parameters.",
     image: "https://plus.unsplash.com/premium_photo-1683134169138-9037062cba51?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tags: ["Sci-kit Learn", "AWS", "Docker", "Github Actions"],

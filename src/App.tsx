@@ -3,8 +3,8 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
-// import Publications from './components/Publications';
 import Contact from './components/Contact';
+import Experience from './components/Experience';
 
 function App() {
   return (
@@ -13,8 +13,8 @@ function App() {
       <main>
         <Hero />
         <Skills />
+        <Experience />
         <Projects />
-        {/* <Publications /> */}
         <Contact />
       </main>
       <footer className="bg-gray-900 text-white py-6">
