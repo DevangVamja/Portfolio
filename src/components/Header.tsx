@@ -12,7 +12,7 @@ export default function Header() {
         <div className="flex items-center space-x-6">
           <a href="#projects" className="hover:text-indigo-200 transition">Projects</a>
           <a href="#skills" className="hover:text-indigo-200 transition">Skills</a>
-          <a href="#Experience" className="hover:text-indigo-200 transition">Experience</a>
+          <a href="#experience" className="hover:text-indigo-200 transition">Experience</a>
           <a href="#contact" className="hover:text-indigo-200 transition">Contact</a>
         </div>
       </nav>
