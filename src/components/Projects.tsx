@@ -11,6 +11,14 @@ const projects = [
   //   demo: "#"
   // },
   {
+    title: "Full_Scale_ML_Project",
+    description: "Built an end-to-end ML project with train and test pipeline for Math score prediction using various categorical and numerical features with various models and hyper-parameters.",
+    image: "https://plus.unsplash.com/premium_photo-1683134169138-9037062cba51?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Sci-kit Learn", "AWS", "Docker", "Github Actions"],
+    github: "https://github.com/DevangVamja/Full-Scale-ML-project",
+    demo: "#"
+  },
+  {
     title: "Natural Language Processing Pipeline",
     description: "Built an end-to-end NLP pipeline for sentiment analysis on social media data, processing over 1M tweets daily.",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=800",
