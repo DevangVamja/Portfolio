@@ -16,15 +16,13 @@ const projects = [
     image: "https://plus.unsplash.com/premium_photo-1683134169138-9037062cba51?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     tags: ["Sci-kit Learn", "AWS", "Docker", "Github Actions"],
     github: "https://github.com/DevangVamja/Full-Scale-ML-project",
-    demo: "#"
   },
   {
-    title: "Natural Language Processing Pipeline",
-    description: "Built an end-to-end NLP pipeline for sentiment analysis on social media data, processing over 1M tweets daily.",
+    title: "CORD-19 Summary Generator",
+    description: "The CORD-19 Summary Generator is a Natural Language Processing (NLP) application designed to retrieve and summarize relevant articles from the COVID-19 Open Research Dataset (CORD-19). Given a user query, the system retrieves the top 5 most relevant documents and generates an abstractive summary of the retrieved articles.",
     image: "https://images.unsplash.com/photo-1518186285589-2f7649de83e0?auto=format&fit=crop&q=80&w=800",
-    tags: ["PyTorch", "BERT", "Docker", "GCP"],
-    github: "#",
-    demo: "#"
+    tags: ["PyTorch", "BART", "nltk", "scikit-learn", "scikit-learn"],
+    github: "https://github.com/DevangVamja/CORD19-SummaryGenerator",
   },
   {
     title: "ATS-Analyzer-OpenAI",
@@ -59,10 +57,10 @@ export default function Projects() {
                     <Github className="w-5 h-5 mr-1" />
                     Code
                   </a>
-                  <a href={project.demo} className="flex items-center text-gray-600 hover:text-indigo-600">
+                  {/* <a href={project.demo} className="flex items-center text-gray-600 hover:text-indigo-600">
                     <ExternalLink className="w-5 h-5 mr-1" />
                     Demo
-                  </a>
+                  </a> */}
                 </div>
               </div>
             </div>
