@@ -30,6 +30,13 @@ const projects = [
     image: "https://images.pexels.com/photos/577585/pexels-photo-577585.jpeg?auto=compress&cs=tinysrgb&w=8002a0a7236a3?auto=format&fit=crop&q=80&w=800",
     tags: ["Python", "Flask", "OpenAI GPT", "PyPDF"],
     github: "https://github.com/DevangVamja/ATS-Analyzer-OpenAI",
+  },
+  {
+    title: "Fraud Detection System",
+    description: "This project focuses on detecting fraudulent transactions using machine learning techniques. The goal is to build a model that can accurately classify transactions as either fraudulent or non-fraudulent based on historical data. The project includes data preprocessing, exploratory data analysis (EDA), model training, and evaluation.",
+    image: "https://img.freepik.com/free-photo/html-css-collage-concept-with-hacker_23-2150061984.jpg?t=st=1741985765~exp=1741989365~hmac=d946a7a2701df5aa6dac66f2ac5437b1dab3b48d659eb7fa9ba99fb8d538d4f1&w=1380",
+    tags: ["Python", "Tensorflow", "Hyperparameter Tuning"],
+    github: "https://github.com/DevangVamja/Fraud-Detection",
   }
 ];
 
