@@ -3,6 +3,18 @@ import { Briefcase } from 'lucide-react';
 
 const experiences = [
   {
+    title: "Data Scientist",
+    company: "Telecom Gateway LLC",
+    duration: "Dec 2024 - Present",
+    description: [
+      "Designed and implemented LSTM-based neural network models to forecast network load and detect anomalies in telecom traffic using high-frequency time-series data, reducing unexpected downtimes by 20%.",
+      "Developed NLP pipelines to analyze customer service transcripts and technician notes, extracting key failure patterns and sentiment trends to improve issue resolution time by 25%.",
+      "Built end-to-end deep learning solutions using TensorFlow and PyTorch for classifying signal degradation events and predicting maintenance needs.",
+      "Created interactive dashboards in Tableau and Streamlit to communicate insights from telecom data, aiding strategic planning and operational efficiency.",
+      "Worked with large-scale datasets stored in cloud environments (AWS S3, BigQuery) and optimized data ingestion workflows using Python and SQL."
+    ]
+  },
+  {
     title: "Network Engineer/Data Scientist",
     company: "Ericsson Inc.",
     duration: "May 2023 - Nov 2024",
