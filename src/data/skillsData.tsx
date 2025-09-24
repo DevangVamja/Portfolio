@@ -5,7 +5,7 @@ export const skillsData = [
   {
     icon: <Brain className="w-8 h-8" />,
     title: "Machine Learning",
-    items: ["TensorFlow", "PyTorch", "Scikit-learn", "Deep Learning"]
+    items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLTK", "SpaCy"]
   },
   {
     icon: <Database className="w-8 h-8" />,
