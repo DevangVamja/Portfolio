@@ -13,7 +13,7 @@ const projects = [
   {
     title: "ETL-Pipeline-Project",
     description: "A scalable ETL (Extract, Transform, Load) pipeline designed to automate data ingestion, cleaning, transformation, and loading into a cloud data warehouse. The project demonstrates best practices in building modular, efficient, and production-ready ETL workflows with monitoring and visualization dashboards.",
-    image: "https://raw.githubusercontent.com/DevangVamja/portfolio-assets/main/etl.png",
+    image: "https://github.com/DevangVamja/Portfolio/blob/main/portfolio-assets/etl.png",
     tags: ["Python", "SQL", "Airflow", "Pandas", "AWS"],
     github: "https://github.com/DevangVamja/ETL-Pipeline-Project"
   },  
