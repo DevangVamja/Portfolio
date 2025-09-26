@@ -2,7 +2,9 @@ import React from 'react';
 import { Brain, BarChart, Database } from 'lucide-react';
 import { Reveal } from './animations/Reveal';
 import { useTheme } from '../context/ThemeContext';
-import profileImage from '../assets/profile-portrait.svg';
+
+const profileImage =
+  'https://res.cloudinary.com/dpgkwxrla/image/upload/v1735864856/portfolio-data/jzhp1o82qavweqeh0mhj.png';
 
 const highlights = [
   {
