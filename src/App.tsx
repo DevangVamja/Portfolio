@@ -5,11 +5,14 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Experience from './components/Experience';
+import { useTheme } from './context/ThemeContext';
 
 function App() {
+  const { theme } = useTheme();
+
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
-      <div className="fixed inset-0 -z-10 bg-gradient-to-br from-indigo-950 via-slate-950 to-slate-900" />
+    <div className={`min-h-screen text-slate-100 transition-colors duration-500 ${theme.app.background}`}>
+      <div className={`fixed inset-0 -z-10 bg-gradient-to-br transition-colors duration-700 ${theme.app.gradient}`} />
       <div className="fixed inset-0 -z-10 bg-grid opacity-40" />
       <Header />
       <main className="relative">
@@ -19,7 +22,7 @@ function App() {
         <Projects />
         <Contact />
       </main>
-      <footer className="bg-slate-900/60 border-t border-white/10 text-slate-300 py-6 backdrop-blur">
+      <footer className={`border-t border-white/10 py-6 text-slate-300 backdrop-blur transition-colors duration-500 ${theme.app.footer}`}>
         <div className="container mx-auto px-6 text-center text-sm">
           <p>© {new Date().getFullYear()} Devang Vamja. All rights reserved.</p>
         </div>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { Brain, Github, Linkedin, Mail } from 'lucide-react';
+import { useTheme } from '../context/ThemeContext';
+import { ThemeToggle } from './ThemeToggle';
 
 const links = [
   { href: '#projects', label: 'Projects' },
@@ -9,12 +11,14 @@ const links = [
 ];
 
 export default function Header() {
+  const { theme } = useTheme();
+
   return (
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/60 backdrop-blur">
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-3">
-          <div className="rounded-full border border-indigo-400/40 bg-indigo-500/10 p-2 shadow-glow">
-            <Brain className="h-6 w-6 text-indigo-300" />
+          <div className={`rounded-full border p-2 transition ${theme.header.iconRing}`}>
+            <Brain className={`h-6 w-6 ${theme.header.iconColor}`} />
           </div>
           <div>
             <span className="text-lg font-semibold tracking-wide text-white">Devang Vamja</span>
@@ -34,23 +38,24 @@ export default function Header() {
           ))}
         </div>
         <div className="flex items-center gap-3">
+          <ThemeToggle />
           <a
             href="mailto:devangvamja2000@gmail.com"
-            className="hidden rounded-full border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:border-indigo-400/60 hover:text-white sm:inline-flex"
+            className={`hidden rounded-full border border-white/10 bg-white/5 p-2 text-slate-300 transition sm:inline-flex ${theme.header.socialHover}`}
             aria-label="Email"
           >
             <Mail className="h-5 w-5" />
           </a>
           <a
             href="https://github.com/DevangVamja"
-            className="rounded-full border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:border-indigo-400/60 hover:text-white"
+            className={`rounded-full border border-white/10 bg-white/5 p-2 text-slate-300 transition ${theme.header.socialHover}`}
             aria-label="GitHub"
           >
             <Github className="h-5 w-5" />
           </a>
           <a
             href="https://www.linkedin.com/in/devangvamja/"
-            className="rounded-full border border-white/10 bg-white/5 p-2 text-slate-300 transition hover:border-indigo-400/60 hover:text-white"
+            className={`rounded-full border border-white/10 bg-white/5 p-2 text-slate-300 transition ${theme.header.socialHover}`}
             aria-label="LinkedIn"
           >
             <Linkedin className="h-5 w-5" />

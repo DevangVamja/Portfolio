@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Github, Linkedin } from 'lucide-react';
 import { Reveal } from './animations/Reveal';
+import { useTheme } from '../context/ThemeContext';
 
 const channels = [
   {
@@ -24,14 +25,16 @@ const channels = [
 ];
 
 export default function Contact() {
+  const { theme } = useTheme();
+
   return (
     <section id="contact" className="relative overflow-hidden py-24">
-      <div className="absolute inset-0 bg-gradient-to-br from-indigo-600 via-purple-600 to-slate-900" />
+      <div className={`absolute inset-0 bg-gradient-to-br ${theme.contact.gradient}`} />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.25)_0,_rgba(255,255,255,0)_45%)]" />
       <div className="container relative mx-auto px-6">
         <Reveal className="mx-auto max-w-2xl text-center text-white">
           <h2 className="text-3xl font-bold md:text-4xl">Let&apos;s Build Something Impactful</h2>
-          <p className="mt-4 text-base text-indigo-100 md:text-lg">
+          <p className={`mt-4 text-base md:text-lg ${theme.contact.accentText}`}>
             I&apos;m always excited to meet collaborators, founders, and teams who care deeply about data-driven experiences.
           </p>
         </Reveal>
@@ -49,9 +52,9 @@ export default function Contact() {
                     </span>
                     <span className="text-lg font-semibold">{channel.label}</span>
                   </div>
-                  <p className="mt-4 text-sm text-indigo-100/90">{channel.description}</p>
+                  <p className={`mt-4 text-sm ${theme.contact.accentMutedText}`}>{channel.description}</p>
                 </div>
-                <span className="mt-6 inline-flex items-center text-sm font-semibold text-indigo-100 transition group-hover:text-white">
+                <span className={`mt-6 inline-flex items-center text-sm font-semibold transition group-hover:text-white ${theme.contact.callToAction}`}>
                   Get in touch
                 </span>
               </a>
