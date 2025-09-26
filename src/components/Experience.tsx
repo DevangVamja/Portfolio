@@ -54,31 +54,38 @@ export default function Experience() {
             Proven impact delivering scalable, data-driven solutions across telecom operations and enterprise analytics teams.
           </p>
         </Reveal>
-        <div className="relative mx-auto mt-14 max-w-5xl border-l border-white/10 pl-8 md:pl-12">
-          <div className={`absolute -left-[1px] top-0 h-full w-px bg-gradient-to-b ${theme.experience.timelineLine}`} />
+        <div className="mx-auto mt-14 max-w-5xl">
           {experiences.map((exp, index) => (
             <Reveal key={exp.title} delay={index * 120} className="relative pb-12 last:pb-0">
-              <div
-                className={`absolute -left-[45px] top-1.5 flex h-12 w-12 items-center justify-center rounded-full border text-white md:-left-[55px] ${theme.experience.timelineRing} ${theme.experience.shadow}`}
-              >
-                <Briefcase className="h-5 w-5" />
-              </div>
-              <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 backdrop-blur transition duration-300 hover:border-white/30 hover:bg-slate-900/80">
-                <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
-                  <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
-                  <span className={`text-sm font-medium uppercase tracking-wide ${theme.experience.durationText}`}>
-                    {exp.duration}
-                  </span>
+              <div className="grid grid-cols-[auto_1px_minmax(0,1fr)] items-start gap-x-8">
+                <div
+                  className={`flex h-12 w-12 items-center justify-center rounded-full border text-white ${theme.experience.timelineRing} ${theme.experience.shadow}`}
+                >
+                  <Briefcase className="h-5 w-5" />
                 </div>
-                <p className={`mt-2 text-sm font-medium ${theme.experience.companyText}`}>{exp.company}</p>
-                <ul className="mt-4 space-y-3 text-sm text-slate-300">
-                  {exp.description.map((sentence) => (
-                    <li key={sentence} className="flex items-start gap-2">
-                      <span className={`mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full ${theme.experience.bullet}`} />
-                      <span>{sentence}</span>
-                    </li>
-                  ))}
-                </ul>
+                <div className="relative h-full">
+                  <span
+                    className={`absolute left-1/2 w-px -translate-x-1/2 bg-gradient-to-b ${theme.experience.timelineLine}`}
+                    style={{ top: 0, bottom: index === experiences.length - 1 ? 0 : '-3rem' }}
+                  />
+                </div>
+                <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 backdrop-blur transition duration-300 hover:border-white/30 hover:bg-slate-900/80">
+                  <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                    <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
+                    <span className={`text-sm font-medium uppercase tracking-wide ${theme.experience.durationText}`}>
+                      {exp.duration}
+                    </span>
+                  </div>
+                  <p className={`mt-2 text-sm font-medium ${theme.experience.companyText}`}>{exp.company}</p>
+                  <ul className="mt-4 space-y-3 text-sm text-slate-300">
+                    {exp.description.map((sentence) => (
+                      <li key={sentence} className="flex items-start gap-2">
+                        <span className={`mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full ${theme.experience.bullet}`} />
+                        <span>{sentence}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </Reveal>
           ))}
