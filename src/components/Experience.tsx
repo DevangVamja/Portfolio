@@ -1,6 +1,7 @@
 import React from 'react';
 import { Briefcase } from 'lucide-react';
 import { Reveal } from './animations/Reveal';
+import { useTheme } from '../context/ThemeContext';
 
 const experiences = [
   {
@@ -42,6 +43,8 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const { theme } = useTheme();
+
   return (
     <section id="experience" className="relative py-24">
       <div className="container mx-auto px-6">
@@ -51,23 +54,27 @@ export default function Experience() {
             Proven impact delivering scalable, data-driven solutions across telecom operations and enterprise analytics teams.
           </p>
         </Reveal>
-        <div className="relative mx-auto mt-14 max-w-5xl border-l border-white/10 pl-8 md:pl-12">
-          <div className="absolute -left-[1px] top-0 h-full w-px bg-gradient-to-b from-indigo-400 via-purple-400/60 to-transparent" />
+        <div className="relative mx-auto mt-14 max-w-5xl pl-[88px]">
+          <div className={`absolute left-[16px] top-0 h-full w-px bg-gradient-to-b ${theme.experience.timelineLine}`} />
           {experiences.map((exp, index) => (
             <Reveal key={exp.title} delay={index * 120} className="relative pb-12 last:pb-0">
-              <div className="absolute -left-[27px] top-1.5 flex h-12 w-12 items-center justify-center rounded-full border border-indigo-400/60 bg-indigo-500/20 text-white shadow-glow md:-left-[35px]">
+              <div
+                className={`absolute left-[32px] top-1.5 flex h-10 w-10 items-center justify-center rounded-full border text-white ${theme.experience.timelineRing} ${theme.experience.shadow}`}
+              >
                 <Briefcase className="h-5 w-5" />
               </div>
               <div className="rounded-2xl border border-white/10 bg-slate-900/60 p-6 backdrop-blur transition duration-300 hover:border-white/30 hover:bg-slate-900/80">
                 <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
                   <h3 className="text-xl font-semibold text-white">{exp.title}</h3>
-                  <span className="text-sm font-medium uppercase tracking-wide text-indigo-200/80">{exp.duration}</span>
+                  <span className={`text-sm font-medium uppercase tracking-wide ${theme.experience.durationText}`}>
+                    {exp.duration}
+                  </span>
                 </div>
-                <p className="mt-2 text-sm font-medium text-indigo-100/90">{exp.company}</p>
+                <p className={`mt-2 text-sm font-medium ${theme.experience.companyText}`}>{exp.company}</p>
                 <ul className="mt-4 space-y-3 text-sm text-slate-300">
                   {exp.description.map((sentence) => (
                     <li key={sentence} className="flex items-start gap-2">
-                      <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-indigo-300" />
+                      <span className={`mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full ${theme.experience.bullet}`} />
                       <span>{sentence}</span>
                     </li>
                   ))}
