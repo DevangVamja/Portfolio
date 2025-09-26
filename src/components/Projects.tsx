@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, ArrowUpRight } from 'lucide-react';
 import { Reveal } from './animations/Reveal';
+import { useTheme } from '../context/ThemeContext';
 
 const projects = [
   {
@@ -48,6 +49,8 @@ const projects = [
 ];
 
 export default function Projects() {
+  const { theme } = useTheme();
+
   return (
     <section id="projects" className="relative py-24">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-950 to-transparent" />
@@ -61,7 +64,9 @@ export default function Projects() {
         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
             <Reveal key={project.title} delay={index * 100}>
-              <article className="group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-lg shadow-indigo-900/20 backdrop-blur transition duration-500 hover:-translate-y-2 hover:border-indigo-400/50 hover:shadow-indigo-800/30">
+              <article
+                className={`group relative flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-slate-900/60 shadow-lg backdrop-blur transition duration-500 hover:-translate-y-2 ${theme.projects.shadow} ${theme.projects.borderHover}`}
+              >
                 <div className="relative h-48 overflow-hidden">
                   <img
                     src={project.image}
@@ -77,7 +82,7 @@ export default function Projects() {
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="rounded-full border border-indigo-500/30 bg-indigo-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wide text-indigo-100"
+                        className={`rounded-full border px-3 py-1 text-xs font-medium uppercase tracking-wide ${theme.projects.tag}`}
                       >
                         {tag}
                       </span>
@@ -86,12 +91,14 @@ export default function Projects() {
                   <div className="mt-6 flex items-center justify-between">
                     <a
                       href={project.github}
-                      className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-200 transition hover:text-white"
+                      className={`inline-flex items-center gap-2 text-sm font-semibold transition hover:text-white ${theme.projects.link}`}
                     >
                       <Github className="h-4 w-4" />
                       View Code
                     </a>
-                    <span className="inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 text-white transition group-hover:border-indigo-300/60 group-hover:bg-indigo-500/20">
+                    <span
+                      className={`inline-flex items-center justify-center rounded-full border border-white/10 bg-white/5 p-2 text-white transition ${theme.projects.iconHover}`}
+                    >
                       <ArrowUpRight className="h-4 w-4" />
                     </span>
                   </div>

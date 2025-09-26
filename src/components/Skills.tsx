@@ -2,15 +2,20 @@ import React from 'react';
 import { SkillCard } from './skills/SkillCard';
 import { skillsData } from '../data/skillsData';
 import { Reveal } from './animations/Reveal';
+import { useTheme } from '../context/ThemeContext';
 
 export default function Skills() {
+  const { theme } = useTheme();
+
   return (
     <section id="skills" className="relative py-24">
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-slate-950 to-transparent" />
       <div className="container relative mx-auto px-6">
         <Reveal className="mx-auto max-w-2xl text-center">
           <h2 className="text-3xl font-bold md:text-4xl">
-            <span className="bg-gradient-to-r from-indigo-300 via-purple-300 to-indigo-200 bg-clip-text text-transparent">
+            <span
+              className={`bg-gradient-to-r bg-clip-text text-transparent ${theme.skills.headingGradient}`}
+            >
               Skills &amp; Expertise
             </span>
           </h2>
