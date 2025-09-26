@@ -59,7 +59,7 @@ export default function Experience() {
           {experiences.map((exp, index) => (
             <Reveal key={exp.title} delay={index * 120} className="relative pb-12 last:pb-0">
               <div
-                className={`absolute -left-[37px] top-1.5 flex h-12 w-12 items-center justify-center rounded-full border text-white md:-left-[45px] ${theme.experience.timelineRing} ${theme.experience.shadow}`}
+                className={`absolute -left-[50px] top-1.5 flex h-12 w-12 items-center justify-center rounded-full border text-white md:-left-[55px] ${theme.experience.timelineRing} ${theme.experience.shadow}`}
               >
                 <Briefcase className="h-5 w-5" />
               </div>
