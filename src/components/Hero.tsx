@@ -4,7 +4,7 @@ import { Reveal } from './animations/Reveal';
 import { useTheme } from '../context/ThemeContext';
 
 const profileImage =
-  'https://res.cloudinary.com/dpgkwxrla/image/upload/v1735864856/portfolio-data/jzhp1o82qavweqeh0mhj.png';
+  'https://res.cloudinary.com/dpgkwxrla/image/upload/v1735859130/portfolio-data/neukjiklbkqxjwwdldz5.jpg';
 
 const highlights = [
   {
