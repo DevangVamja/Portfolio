@@ -1,35 +1,55 @@
-import React from 'react';
-import { Brain, Database, BarChart, Code, Share2, TestTube } from 'lucide-react';
+import React from "react";
+import {
+  Database,
+  Layers,
+  Cloud,
+  Code2,
+  BarChart2,
+  BrainCircuit,
+} from "lucide-react";
 
 export const skillsData = [
   {
-    icon: <Brain className="w-8 h-8" />,
-    title: "Machine Learning",
-    items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLTK", "SpaCy"]
-  },
-  {
     icon: <Database className="w-8 h-8" />,
-    title: "Data Processing",
-    items: ["Python", "R", "SQL", "Pandas", "NumPy"]
+    title: "Data Engineering",
+    items: [
+      "ETL / ELT Pipelines",
+      "Data Modeling",
+      "Dimensional Modeling",
+      "SQL (Advanced)",
+      "dbt (experience)",
+      "Batch & Streaming Workflows",
+    ],
   },
   {
-    icon: <BarChart className="w-8 h-8" />,
-    title: "Data Visualization",
-    items: ["Matplotlib", "Seaborn", "Plotly", "Tableau"]
+    icon: <Cloud className="w-8 h-8" />,
+    title: "Cloud & Big Data",
+    items: ["AWS (S3, EC2)", "Google Cloud", "Hadoop", "Hive", "Spark"],
   },
   {
-    icon: <Code className="w-8 h-8" />,
+    icon: <Layers className="w-8 h-8" />,
+    title: "Data Processing & Wrangling",
+    items: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "R",
+      "Data Cleaning & Feature Engineering",
+    ],
+  },
+  {
+    icon: <BarChart2 className="w-8 h-8" />,
+    title: "Analytics & Visualization",
+    items: ["Tableau", "Plotly", "Matplotlib", "Seaborn"],
+  },
+  {
+    icon: <BrainCircuit className="w-8 h-8" />,
+    title: "Machine Learning (Supporting Skill)",
+    items: ["TensorFlow", "PyTorch", "Scikit-learn", "NLP (NLTK, SpaCy)"],
+  },
+  {
+    icon: <Code2 className="w-8 h-8" />,
     title: "Programming",
-    items: ["Python", "C#", "C++", "Java", "Java Script"]
+    items: ["Python", "Java", "C++", "C#", "JavaScript"],
   },
-  {
-    icon: <Share2 className="w-8 h-8" />,
-    title: "Big Data",
-    items: ["Spark", "Hadoop", "AWS", "Google Cloud"]
-  },
-  {
-    icon: <TestTube className="w-8 h-8" />,
-    title: "Statistics",
-    items: ["Hypothesis Testing", "A/B Testing", "Regression Analysis"]
-  }
 ];

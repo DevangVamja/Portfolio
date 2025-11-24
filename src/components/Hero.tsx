@@ -1,33 +1,36 @@
-import React from 'react';
-import { Brain, BarChart, Database } from 'lucide-react';
-import { Reveal } from './animations/Reveal';
-import { useTheme } from '../context/ThemeContext';
+import React from "react";
+import { Brain, BarChart, Database } from "lucide-react";
+import { Reveal } from "./animations/Reveal";
+import { useTheme } from "../context/ThemeContext";
 
 const profileImage =
-  'https://res.cloudinary.com/dpgkwxrla/image/upload/v1735859130/portfolio-data/neukjiklbkqxjwwdldz5.jpg';
+  "https://res.cloudinary.com/dpgkwxrla/image/upload/v1735859130/portfolio-data/neukjiklbkqxjwwdldz5.jpg";
 
 const highlights = [
   {
     Icon: Brain,
-    title: 'End-to-End ML Systems',
-    description: 'Designing resilient pipelines that take models from exploration to dependable production deployments.'
+    title: "End-to-End Data Pipelines",
+    description:
+      "Designing resilient pipelines that move data from raw ingestion to analytics- and ML-ready layers in production.",
   },
   {
     Icon: Database,
-    title: 'Scalable Data Engines',
-    description: 'Modern data stacks on cloud-native infrastructure that transform messy data into reliable insights.'
+    title: "Cloud-Native Data Platforms",
+    description:
+      "Modern data stacks on AWS and big-data tooling that transform messy sources into reliable, well-modeled datasets.",
   },
   {
     Icon: BarChart,
-    title: 'Insightful Storytelling',
-    description: 'Human-centered dashboards and narratives that make complex analyses clear for every stakeholder.'
-  }
+    title: "Analytics & Dashboards",
+    description:
+      "Human-centered dashboards and reporting that make complex data platforms clear for both technical and business teams.",
+  },
 ];
 
 const stats = [
-  { label: 'Production ML Pipelines', value: '15+' },
-  { label: 'Stakeholder Dashboards', value: '30+' },
-  { label: 'Terabytes of Data Tamed', value: '40+' }
+  { label: "Data Pipelines Deployed", value: "15+" },
+  { label: "Analytics & Ops Dashboards", value: "30+" },
+  { label: "TBs of Data Orchestrated", value: "40+" },
 ];
 
 export default function Hero() {
@@ -37,8 +40,12 @@ export default function Hero() {
     <section
       className={`relative overflow-hidden bg-gradient-to-br py-28 transition-colors duration-700 ${theme.hero.gradient}`}
     >
-      <div className={`absolute -left-16 top-10 h-72 w-72 rounded-full blur-3xl ${theme.hero.blobOne}`} />
-      <div className={`absolute right-10 bottom-0 h-64 w-64 rounded-full blur-3xl ${theme.hero.blobTwo}`} />
+      <div
+        className={`absolute -left-16 top-10 h-72 w-72 rounded-full blur-3xl ${theme.hero.blobOne}`}
+      />
+      <div
+        className={`absolute right-10 bottom-0 h-64 w-64 rounded-full blur-3xl ${theme.hero.blobTwo}`}
+      />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.2)_0,_rgba(255,255,255,0)_45%)]" />
       <div className="container relative mx-auto px-6">
         <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_minmax(0,_0.85fr)]">
@@ -50,17 +57,21 @@ export default function Hero() {
             </Reveal>
             <Reveal delay={120}>
               <h1 className="mt-8 max-w-3xl text-4xl font-bold leading-tight text-white md:text-6xl">
-                Building intelligent systems that turn{' '}
+                Building data platforms and pipelines that turn{" "}
                 <span className="bg-gradient-to-r from-amber-200 via-white to-amber-200 bg-clip-text text-transparent">
                   complex data
-                </span>{' '}
+                </span>{" "}
                 into confident decisions.
               </h1>
             </Reveal>
             <Reveal delay={220}>
-              <p className={`mt-6 max-w-2xl text-lg md:text-xl ${theme.hero.descriptionText}`}>
-                Experienced data scientist and ML engineer with a track record of crafting scalable analytics products,
-                production-ready models, and captivating data stories for enterprise stakeholders.
+              <p
+                className={`mt-6 max-w-2xl text-lg md:text-xl ${theme.hero.descriptionText}`}
+              >
+                Data engineer with a strong ML background, focused on crafting
+                scalable data pipelines, cloud ETL workflows, and
+                analytics-ready datasets that power enterprise products and
+                decision-making.
               </p>
             </Reveal>
             <Reveal delay={320}>
@@ -89,8 +100,12 @@ export default function Hero() {
                     key={stat.label}
                     className="rounded-2xl border border-white/20 bg-white/10 p-4 text-left backdrop-blur transition hover:border-white/60 hover:bg-white/20 sm:text-center"
                   >
-                    <p className="text-3xl font-semibold text-white">{stat.value}</p>
-                    <p className={`mt-2 text-xs font-medium uppercase tracking-widest ${theme.hero.statsLabel}`}>
+                    <p className="text-3xl font-semibold text-white">
+                      {stat.value}
+                    </p>
+                    <p
+                      className={`mt-2 text-xs font-medium uppercase tracking-widest ${theme.hero.statsLabel}`}
+                    >
                       {stat.label}
                     </p>
                   </div>
@@ -104,7 +119,11 @@ export default function Hero() {
               <div
                 className={`relative overflow-hidden rounded-[3rem] border border-white/20 bg-slate-950/40 backdrop-blur ${theme.hero.profileRing} ${theme.hero.profileShadow}`}
               >
-                <img src={profileImage} alt="Portrait of Devang Vamja" className="h-full w-full object-cover" />
+                <img
+                  src={profileImage}
+                  alt="Portrait of Devang Vamja"
+                  className="h-full w-full object-cover"
+                />
               </div>
             </div>
           </Reveal>
@@ -116,10 +135,16 @@ export default function Hero() {
                 <span className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/5 to-white/0 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                 <div className="relative">
                   <div className="mb-4 inline-flex items-center justify-center rounded-full bg-white/20 p-3">
-                    <highlight.Icon className={`h-6 w-6 ${theme.hero.highlightIcon}`} />
+                    <highlight.Icon
+                      className={`h-6 w-6 ${theme.hero.highlightIcon}`}
+                    />
                   </div>
-                  <h3 className="text-lg font-semibold text-white">{highlight.title}</h3>
-                  <p className={`mt-3 text-sm ${theme.hero.descriptionText}`}>{highlight.description}</p>
+                  <h3 className="text-lg font-semibold text-white">
+                    {highlight.title}
+                  </h3>
+                  <p className={`mt-3 text-sm ${theme.hero.descriptionText}`}>
+                    {highlight.description}
+                  </p>
                 </div>
               </div>
             </Reveal>

@@ -1,13 +1,13 @@
-import React from 'react';
-import { Brain, Github, Linkedin, Mail } from 'lucide-react';
-import { useTheme } from '../context/ThemeContext';
-import { ThemeToggle } from './ThemeToggle';
+import React from "react";
+import { Brain, Github, Linkedin, Mail } from "lucide-react";
+import { useTheme } from "../context/ThemeContext";
+import { ThemeToggle } from "./ThemeToggle";
 
 const links = [
-  { href: '#projects', label: 'Projects' },
-  { href: '#skills', label: 'Skills' },
-  { href: '#experience', label: 'Experience' },
-  { href: '#contact', label: 'Contact' }
+  { href: "#projects", label: "Data Engineering Projects" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export default function Header() {
@@ -17,12 +17,18 @@ export default function Header() {
     <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-950/60 backdrop-blur">
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
         <div className="flex items-center space-x-3">
-          <div className={`rounded-full border p-2 transition ${theme.header.iconRing}`}>
+          <div
+            className={`rounded-full border p-2 transition ${theme.header.iconRing}`}
+          >
             <Brain className={`h-6 w-6 ${theme.header.iconColor}`} />
           </div>
           <div>
-            <span className="text-lg font-semibold tracking-wide text-white">Devang Vamja</span>
-            <p className="text-xs text-slate-400">Data Scientist & ML Engineer</p>
+            <span className="text-lg font-semibold tracking-wide text-white">
+              Devang Vamja
+            </span>
+            <p className="text-xs text-slate-400">
+              Data Engineer · Scalable Pipelines & Cloud ETL
+            </p>
           </div>
         </div>
         <div className="hidden items-center gap-8 md:flex">

@@ -1,8 +1,8 @@
-import React from 'react';
-import { SkillCard } from './skills/SkillCard';
-import { skillsData } from '../data/skillsData';
-import { Reveal } from './animations/Reveal';
-import { useTheme } from '../context/ThemeContext';
+import React from "react";
+import { SkillCard } from "./skills/SkillCard";
+import { skillsData } from "../data/skillsData";
+import { Reveal } from "./animations/Reveal";
+import { useTheme } from "../context/ThemeContext";
 
 export default function Skills() {
   const { theme } = useTheme();
@@ -20,7 +20,9 @@ export default function Skills() {
             </span>
           </h2>
           <p className="mt-4 text-base text-slate-300 md:text-lg">
-            A multidisciplinary toolkit that bridges advanced analytics, robust engineering, and compelling storytelling.
+            A modern data engineering toolkit built around scalable pipelines,
+            cloud-native ETL, analytics-ready modeling, and the engineering
+            fundamentals that keep data flowing reliably.
           </p>
         </Reveal>
         <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
